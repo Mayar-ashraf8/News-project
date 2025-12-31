@@ -7,7 +7,7 @@ if($connection->error==false){
         $id = $_POST["id_news"];
         $category_name = $_POST["new_category_name"];
         $address = $_POST["new_address"];
-        $detalis = $_POST["new_details"];
+        $details = $_POST["new_details"];
         $photo = $_POST["new_photo"];
 
         $sql = "UPDATE addnews SET category_news='$category_name',address='$address',details='$details',news_photo='$photo'
