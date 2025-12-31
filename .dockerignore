@@ -1,0 +1,41 @@
+# Ignore Dockerfile itself and dockerignore
+Dockerfile
+.dockerignore
+
+# Ignore Git files
+.git
+.gitignore
+
+# Ignore OS/system files
+*.log
+*.tmp
+*.swp
+*.bak
+Thumbs.db
+.DS_Store
+
+# Ignore IDE/editor settings
+.vscode/
+.idea/
+
+# Ignore environment/config files
+.env
+*.env
+
+# Ignore node or frontend dependencies (if any)
+node_modules/
+dist/
+
+# Ignore composer cache/vendor if you want fresh install inside container
+vendor/
+composer.lock
+
+# Ignore database dumps/backups (keep only schema if needed)
+*.sql
+*.sql.gz
+*.db
+
+# Ignore tests or docs if not needed in container
+tests/
+docs/
+README.md
