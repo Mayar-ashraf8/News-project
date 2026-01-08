@@ -1,0 +1,27 @@
+
+
+services:
+  web:
+    build: .
+    container_name: news-web
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    volumes:
+      - ./src:/var/www/html
+    restart: always
+
+  db:
+    image: mysql:8.0
+    container_name: news-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: news_db
+      MYSQL_USER: news_user
+      MYSQL_PASSWORD: news_pass
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    restart: always
