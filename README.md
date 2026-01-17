@@ -46,6 +46,11 @@ Example:
 add_news.php :  Add a new article
 view_news.php:  View all articles
 
+*Clone the Repository:
+git clone https://github.com/Mayar-ashraf8/News-project.git
+
+*URL (my project is alive on):
+https://news-project-7.onrender.com
 
 
 
