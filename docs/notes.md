@@ -19,3 +19,11 @@ Even if I remove the project from my local computer, I can always clone it back 
 This gave me confidence that my work is safe, backed up, and accessible anywhere.  
 -I learned in this assignment was how to make commits.
  This skill made it much easier for me to modify and improve my program, since I can track changes step by step and return to previous versions whenever needed
+
+
+ * challenges I faced deploying to a VPS:
+  I faced an issue with connecting to the database.
+   The problem was that the connection settings in "connectdb.php" were configured to use "localhost".
+    However, inside a Docker environment or on a real server, I needed to use the service name (like "db") or the IP address of the database container instead.
+* Solution:
+    I updated the connection file to: php $connection = new mysqli("db", "root", "", "dbproject");
